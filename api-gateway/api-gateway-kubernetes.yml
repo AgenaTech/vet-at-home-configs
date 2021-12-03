@@ -7,14 +7,26 @@ spring:
         locator:
           enabled: false
       routes:
-        - id: profiles
-          uri: http://profiles
+        - id: userProfilesPrincipalGetPatchDelete
+          uri: http://pet-profiles
           predicates:
-            - Path=/api/v1/profiles/**
-        - id: auth-client
-          uri: http://auth-client
+            - Path=/profiles/me
+            - Method=GET,PATCH,DELETE
+          filters:
+            - AddPrincipalToPathFilter
+        - id: userProfilesPut
+          uri: http://pet-profiles
           predicates:
-            - Path=/api/v1/auth/**, /api/v1/auth-client/**
+            - Path=/profiles/**
+            - Method=PUT
+        - id: serviceFunctions
+          uri: http://pet-profiles
+          predicates:
+            - Path=/service/**
+        - id: petprofiles
+          uri: http://pet-profiles
+          predicates:
+            - Path=/pets, /pets/**, /api/v1/petprofiles/**
         - id: openapi
           uri: http://api-gateway
           predicates:
