@@ -4,10 +4,10 @@ security-constraints:
   open-uri:
     - /actuator/**
     - /api/v1/*/api-doc
-    - /profiles
-    - /profiles/**
-    - /pets/**
-    - /pets
+    - /api/v1/profiles
+    - /api/v1/profiles/**
+    - /api/v1/pets/**
+    - /api/v1/pets
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
@@ -23,7 +23,7 @@ spring:
         - id: userProfilesPrincipalGetPatchDelete
           uri: http://localhost:8095
           predicates:
-            - Path=/profiles/me
+            - Path=/api/v1/profiles/me
             - Method=GET,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
@@ -39,7 +39,7 @@ spring:
         - id: petprofiles
           uri: http://localhost:8095
           predicates:
-            - Path=/pets, /pets/**, /api/v1/petprofiles/**, /service/**, /profiles/**
+            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/service/**, /api/v1/profiles/**
         - id: openapi
           uri: http://localhost:8081
           predicates:
