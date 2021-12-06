@@ -1,7 +1,6 @@
 server:
   port: 8095
 spring:
-  data.rest.baseUri: api/v1
   data.rest.base-path: api/v1
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
