@@ -23,8 +23,8 @@ spring:
         - id: userProfilesPrincipalGetPatchDelete
           uri: http://localhost:8095
           predicates:
-            - Path=/api/v1/profiles/me
-            - Method=GET,PATCH,DELETE
+            - Path=/api/v1/profiles/me, /api/v1/profiles/me/**
+            - Method=GET,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
 #        - id: userProfilesPut
