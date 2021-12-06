@@ -27,19 +27,19 @@ spring:
             - Method=GET,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
-        - id: userProfilesPut
-          uri: http://localhost:8095
-          predicates:
-            - Path=/profiles/**
-            - Method=PUT
-        - id: serviceFunctions
-          uri: http://localhost:8095
-          predicates:
-            - Path=/service/**
+#        - id: userProfilesPut
+#          uri: http://localhost:8095
+#          predicates:
+#            - Path=/profiles/**,
+#            - Method=PUT
+#        - id: serviceFunctions
+#          uri: http://localhost:8095
+#          predicates:
+#            - Path=/service/**, /profiles/**
         - id: petprofiles
           uri: http://localhost:8095
           predicates:
-            - Path=/pets, /pets/**, /api/v1/petprofiles/**
+            - Path=/pets, /pets/**, /api/v1/petprofiles/**, /service/**, /profiles/**
         - id: openapi
           uri: http://localhost:8081
           predicates:
