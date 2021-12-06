@@ -23,8 +23,8 @@ spring:
         - id: userProfilesPrincipalGetPatchDelete
           uri: http://localhost:8095
           predicates:
-            - Path=/api/v1/profiles/me, /api/v1/profiles/me/**
-            - Method=GET,POST,PATCH,DELETE
+            - Path=/api/v1/profiles/me, /api/v1/service/profile/me/**, /api/v1/service/pets/**
+            - Method=GET,PUT,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
 #        - id: userProfilesPut
@@ -39,7 +39,7 @@ spring:
         - id: petprofiles
           uri: http://localhost:8095
           predicates:
-            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/service/**, /api/v1/profiles/**
+            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
         - id: openapi
           uri: http://localhost:8081
           predicates:
