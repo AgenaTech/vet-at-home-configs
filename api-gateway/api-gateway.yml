@@ -14,28 +14,21 @@ security-constraints:
 spring:
   cloud:
     gateway:
+      forwarded:
+        enabled: true
       default-filters:
         - TokenRelay
       discovery:
         locator:
           enabled: false
       routes:
-        - id: userProfilesPrincipalGetPatchDelete
+        - id: userProfilesPrincipal
           uri: http://localhost:8095
           predicates:
             - Path=/api/v1/profiles/me, /api/v1/service/profile/me/**, /api/v1/service/pets/**
             - Method=GET,PUT,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
-#        - id: userProfilesPut
-#          uri: http://localhost:8095
-#          predicates:
-#            - Path=/profiles/**,
-#            - Method=PUT
-#        - id: serviceFunctions
-#          uri: http://localhost:8095
-#          predicates:
-#            - Path=/service/**, /profiles/**
         - id: petprofiles
           uri: http://localhost:8095
           predicates:
