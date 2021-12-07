@@ -13,7 +13,7 @@ spring:
       hibernate:
         cache.use_second_level_cache: true
         cache.region.factory_class: net.sf.ehcache.hibernate.EhCacheRegionFactory
-        cache.queries: true
+#        cache.queries: true
   datasource:
     url: jdbc:postgresql://localhost:5432/pet-profiles?ssl=false
     username: user
