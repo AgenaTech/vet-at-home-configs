@@ -20,6 +20,7 @@ spring:
         enabled: true
         forEnabled: true
         protoEnabled: true
+        portEnabled: true
       default-filters:
         - TokenRelay
       discovery:
