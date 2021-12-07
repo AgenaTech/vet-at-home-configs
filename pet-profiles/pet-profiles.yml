@@ -11,10 +11,12 @@ spring:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        cache.use_second_level_cache: true
-        cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
-#        cache.region.factory_class: net.sf.ehcache.hibernate.EhCacheRegionFactory
-        cache.queries: true
+        cache:
+          use_second_level_cache: true
+          region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+          queries: true
+          ehcache:
+            missing_cache_strategy: create
   datasource:
     url: jdbc:postgresql://localhost:5432/pet-profiles?ssl=false
     username: user
