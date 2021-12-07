@@ -70,6 +70,8 @@ keycloak-client:
   server-url: https://auth-dev.agenadev.com/auth
   realm: vet-at-home
 management:
+  trace:
+    http.enabled: true
   endpoints:
     web:
       exposure:
