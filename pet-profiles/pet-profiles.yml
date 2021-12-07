@@ -17,7 +17,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/pet-profiles?ssl=false
     username: user
     password: password
+management:
+  trace.http.enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 springdoc.api-docs.path: /api/v1/petprofiles/api-doc
 logging:
   level:
     com.agenatech: DEBUG
+
