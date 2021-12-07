@@ -1,5 +1,6 @@
 server:
   port: 8095
+  forward-headers-strategy: framework
 spring:
   data.rest.base-path: api/v1
   jpa:
