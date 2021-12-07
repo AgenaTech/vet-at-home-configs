@@ -16,6 +16,8 @@ spring:
     gateway:
       forwarded:
         enabled: true
+      x-forwarded:
+        enabled: true
       default-filters:
         - TokenRelay
       discovery:
