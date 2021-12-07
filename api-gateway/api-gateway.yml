@@ -31,7 +31,7 @@ spring:
         - id: userProfilesPrincipal
           uri: http://localhost:8095
           predicates:
-            - Path=/api/v1/profiles/me, /api/v1/service/profile/me/**, /api/v1/service/pets/**
+            - Path=/api/v1/profiles/me, /api/v1/service/**
             - Method=GET,PUT,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
