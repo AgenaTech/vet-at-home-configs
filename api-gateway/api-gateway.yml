@@ -18,6 +18,8 @@ spring:
         enabled: true
       x-forwarded:
         enabled: true
+        forEnabled: true
+        protoEnabled: true
       default-filters:
         - TokenRelay
       discovery:
