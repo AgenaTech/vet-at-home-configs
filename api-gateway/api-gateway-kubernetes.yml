@@ -8,14 +8,14 @@ spring:
           enabled: false
       routes:
         - id: userProfilesPrincipal
-          uri: http://pet-profiles
+          uri: http://profiles
           predicates:
             - Path=/api/v1/profiles/me, /api/v1/service/profile/me/**, /api/v1/service/pets/**
             - Method=GET,PUT,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
         - id: petprofiles
-          uri: http://pet-profiles
+          uri: http://profiles
           predicates:
             - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
         - id: openapi
