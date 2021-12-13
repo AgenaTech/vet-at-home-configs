@@ -1,32 +1,32 @@
 spring:
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
-      discovery:
-        locator:
-          enabled: false
+#      default-filters:
+#        - TokenRelay
+#      discovery:
+#        locator:
+#          enabled: false
       routes:
         - id: userProfilesPrincipal
           uri: http://profiles
-          predicates:
-            - Path=/api/v1/profiles/me, /api/v1/service/**
-            - Method=GET,PUT,POST,PATCH,DELETE
-          filters:
-            - AddPrincipalToPathFilter
+#          predicates:
+#            - Path=/api/v1/profiles/me, /api/v1/service/**
+#            - Method=GET,PUT,POST,PATCH,DELETE
+#          filters:
+#            - AddPrincipalToPathFilter
         - id: petprofiles
           uri: http://profiles
-          predicates:
-            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
+#          predicates:
+#            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
         - id: questionnaire
           uri: http://questionnaire
-          predicates:
-            - Path=/api/v1/questions/**
+#          predicates:
+#            - Path=/api/v1/questions/**
         - id: openapi
           uri: http://api-gateway
-          predicates:
-            - Path=/v3/api-docs/**
-          filters:
-            - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
+#          predicates:
+#            - Path=/v3/api-docs/**
+#          filters:
+#            - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
 keycloak-client:
   server-url: https://auth-dev.agenadev.com/auth
