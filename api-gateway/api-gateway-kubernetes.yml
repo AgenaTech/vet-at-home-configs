@@ -1,11 +1,6 @@
 spring:
   cloud:
     gateway:
-#      default-filters:
-#        - TokenRelay
-#      discovery:
-#        locator:
-#          enabled: false
       routes:
         - id: userProfilesPrincipal
           uri: http://profiles
