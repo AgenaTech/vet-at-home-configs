@@ -39,6 +39,10 @@ spring:
           uri: http://localhost:8095
           predicates:
             - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
+        - id: questionnaire
+          uri: http://localhost:8096
+          predicates:
+            - Path=/api/v1/questions/**
         - id: openapi
           uri: http://localhost:8081
           predicates:

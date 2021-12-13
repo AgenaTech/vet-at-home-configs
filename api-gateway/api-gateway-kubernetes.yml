@@ -18,6 +18,10 @@ spring:
           uri: http://profiles
           predicates:
             - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
+        - id: questionnaire
+          uri: http://questionnaire
+          predicates:
+            - Path=/api/v1/questions/**
         - id: openapi
           uri: http://api-gateway
           predicates:
