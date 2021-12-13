@@ -8,6 +8,7 @@ security-constraints:
     - /api/v1/profiles/**
     - /api/v1/pets/**
     - /api/v1/pets
+    - /api/v1/questions/**
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
