@@ -1,0 +1,11 @@
+spring.servlet.multipart.max-file-size: 1MB
+amazon:
+  accessKey: AKIAV5GYAUZWLS72YZV5
+  secretKey: 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
+  bucketName: agenatech-dev
+  region: eu-north-1
+  maxFileSizeInMb: 5
+springdoc.api-docs.path: /api/v1/multimedia-manager/api-doc
+management.endpoints.web.exposure.include: '*'
+logging.level:
+  com.agenatech: DEBUG
