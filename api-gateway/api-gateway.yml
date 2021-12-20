@@ -40,6 +40,7 @@ spring:
           uri: http://localhost:8095
           predicates:
             - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
+            - Method=GET,PUT,PATCH,DELETE
         - id: questionnaire
           uri: http://localhost:8096
           predicates:
