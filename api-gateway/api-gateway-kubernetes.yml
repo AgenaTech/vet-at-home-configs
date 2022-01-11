@@ -5,8 +5,8 @@ spring:
         - id: userProfilesPrincipal
           uri: http://profiles
           predicates:
-            - Path=/api/v1/profiles/me, /api/v1/profiles/me/pets, /api/v1/service/**
-            - Method=GET,PUT,POST,PATCH,DELETE
+            - Path=/api/v1/profiles/me, /api/v1/profiles/me/pets
+            - Method=GET,POST,PATCH,DELETE
           filters:
             - AddPrincipalToPathFilter
         - id: petprofiles
