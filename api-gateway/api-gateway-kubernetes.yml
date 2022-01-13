@@ -12,7 +12,7 @@ spring:
         - id: petprofiles
           uri: http://profiles
           predicates:
-            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/**
+            - Path=/api/v1/pets, /api/v1/pets/**, /api/v1/petprofiles/**, /api/v1/profiles/*/*, /api/v1/profiles/api-doc
         - id: questionnaire
           uri: http://questionnaire
           predicates:
