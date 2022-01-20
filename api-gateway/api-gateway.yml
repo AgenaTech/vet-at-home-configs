@@ -19,12 +19,6 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - PATCH
-              - DELETE
       forwarded:
         enabled: true
       x-forwarded:
