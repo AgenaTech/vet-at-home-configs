@@ -15,6 +15,10 @@ security-constraints:
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
       forwarded:
         enabled: true
       x-forwarded:
