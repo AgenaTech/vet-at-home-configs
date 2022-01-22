@@ -30,7 +30,7 @@ spring:
         prefixEnabled: true
       default-filters:
         - TokenRelay
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Request-Method Access-Control-Request-Headers
       discovery:
         locator:
           enabled: false
