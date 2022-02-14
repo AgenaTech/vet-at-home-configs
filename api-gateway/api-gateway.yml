@@ -12,6 +12,7 @@ security-constraints:
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
+    - /refresh/**
 spring:
   cloud:
     gateway:
