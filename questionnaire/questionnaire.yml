@@ -51,14 +51,14 @@ questionnaire:
         - value: Ja
         - value: Nej
     - id: 8
-      value: Kan du uppskatta hur många andningar per minut?
-      answers:
-    - id: 9
       value: Vilka symptom?
       answers:
         - value: Hosta
         - value: Väsande ljud
         - value: Andas fort
+    - id: 9
+      value: Kan du uppskatta hur många andningar per minut?
+      answers:
     - id: 10
       value: Är allmäntillståndet påverkat?
       answers:
