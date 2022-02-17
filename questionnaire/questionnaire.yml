@@ -10,6 +10,7 @@ questionnaire:
         - value: Nej
     - id: 1
       value: Hur länge har detta pågått?
+      answers:
     - id: 2
       value: question-0-val
       answers:
