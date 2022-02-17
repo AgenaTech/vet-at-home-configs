@@ -4,26 +4,31 @@ server:
 questionnaire:
   questions:
     - id: 0
+      value: Är allmäntillståndet påverkat?
+      answers:
+        - value: Ja
+        - value: Nej
+    - id: 1
+      value: Hur länge har detta pågått?
+    - id: 2
       value: question-0-val
       answers:
         - value: answer1-to-question0
           nextQuestion: 1
         - value: a2val
           nextQuestion: 2
-    - id: 1
+    - id: 3
       value: question-1-val
       answers:
         - value: answer1-to-question1
           nextQuestion: 2
         - value: answer2-to-question1
           nextQuestion: 2
-    - id: 2
+    - id: 4
       value: question-2-val
       answers:
         - value: answer1-to-question2
 springdoc.api-docs.path: /api/v1/questionnaire/api-doc
-management.endpoints.web.exposure.include: '*'
+management.endpoints.web.exposure.include: "*"
 logging.level:
-    com.agenatech: DEBUG
-
-
+  com.agenatech: DEBUG
