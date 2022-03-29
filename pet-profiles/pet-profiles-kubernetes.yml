@@ -6,6 +6,4 @@ spring:
     username: postgres
     password: '{cipher}d4879146ce17ed3f1b55afbb90ae599a36328bc2647f1ca4fcc46595e75ed7a00215eb917fd93e71a71994455c35d1d1'
     hikari:
-      maximum-pool-size: 5
-      initial-pool-size: 1
       connection-timeout: 20000
