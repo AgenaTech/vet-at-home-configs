@@ -16,11 +16,9 @@ security-constraints:
 spring:
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
+      httpclient:
+        connect-timeout: 3000
+        response-timeout: 5s
       forwarded:
         enabled: true
       x-forwarded:
