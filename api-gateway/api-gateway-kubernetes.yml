@@ -23,11 +23,5 @@ spring:
             - Path=/v3/api-docs/**
           filters:
             - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
-        - id: refreshQuestionnare
-          uri: http://questionnaire
-          predicates:
-            - Path=/refresh/questionnaire
-          filters:
-            - RewritePath=/refresh/questionnaire, /actuator/refresh
 keycloak-client:
   server-url: https://auth.vetathome.se/auth
