@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://database.ceg7plbi7uaq.eu-north-1.rds.amazonaws.com:5432/pet-profiles?ssl=false
+    url: jdbc:postgresql://database.ceg7plbi7uaq.eu-north-1.rds.amazonaws.com:5432/pet-profiles-dev?ssl=false
     username: postgres
     password: '{cipher}3e1df6860e057ff771b2a8f489a3c431583a8b945c62fcf4b44dade6608bf7d20047483c0803b6f2dbc95308754b45ce'
     hikari:
