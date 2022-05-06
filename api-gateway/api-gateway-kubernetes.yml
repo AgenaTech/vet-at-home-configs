@@ -34,4 +34,4 @@ spring:
           filters:
             - RewritePath=/refresh/questionnaire, /actuator/refresh
 keycloak-client:
-  server-url: https://authentication-dev.agenadev.com/auth
+  server-url: https://auth-dev.agenadev.com/auth
